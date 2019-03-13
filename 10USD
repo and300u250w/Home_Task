@@ -1,0 +1,8 @@
+SELECT DISTINCT ON (tr."USER_ID")
+	tr."USER_ID", tr."CURRENCY", tr."AMOUNT", 
+	CASE WHEN fx.ccy = tr."CURRENCY" THEN tr."AMOUNT"*fx.rate END AS "AMOUNT_IN_USD",
+	tr."CREATED_DATE" as "Date_of_First_Transaction"
+FROM Public.fx_rates AS fx
+INNER JOIN transactions as tr ON tr."CURRENCY" = fx.ccy
+WHERE base_ccy = 'USD' AND tr."TYPE" = 'CARD_PAYMENT' AND tr."STATE" = 'COMPLETED' and (CASE WHEN fx.ccy = tr."CURRENCY" THEN fx.rate * tr."AMOUNT" END) >10
+ORDER BY tr."USER_ID", tr."CREATED_DATE" DESC
