@@ -12242,7 +12242,7 @@ Scipy: 1.2.1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="The-Data-Set">The Data Set<a class="anchor-link" href="#The-Data-Set">&#182;</a></h3><p>In the following cells, we will import our dataset from a .csv file as a Pandas DataFrame. Furthermore, we will begin exploring the dataset to gain an understanding of the type, quantity, and distribution of data in our dataset. For this purpose, we will use Pandas' built-in describe feature, as well as parameter histograms and a correlation matrix.</p>
+<h3 id="The-Data-Set">The Data Set<a class="anchor-link" href="#The-Data-Set">&#182;</a></h3><p>In the following cells, I will be importing our dataset from csv files as a Pandas DataFrame. Furthermore, I will begin exploring the dataset to gain an understanding of the type, quantity, and distribution of data in our dataset. For this purpose, I will use Pandas' built-in describe feature, as well as parameter histograms and a correlation matrix.</p>
 
 </div>
 </div>
@@ -12434,7 +12434,8 @@ Scipy: 1.2.1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Preparing-Data-to-train-ML-model">Preparing Data to train ML model<a class="anchor-link" href="#Preparing-Data-to-train-ML-model">&#182;</a></h2>
+<h2 id="Preparing-Data-to-train-ML-model">Preparing Data to train ML model<a class="anchor-link" href="#Preparing-Data-to-train-ML-model">&#182;</a></h2><p>To be able run ML on our data I have to convert all not numeric values to numbers. I'll be hashing all the data to numbers. Converting all columns except user ID took me 50 seconds and user IDs 22 minutes. Hashing user ids takes way more time because user ids has more characters in comparison of other cells.</p>
+
 </div>
 </div>
 </div>
@@ -12900,7 +12901,7 @@ Valid Transactions: 337095
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Unsupervised-Outlier-Detection">Unsupervised Outlier Detection<a class="anchor-link" href="#Unsupervised-Outlier-Detection">&#182;</a></h1><p>Now that we have processed our data, we can begin deploying our machine learning algorithms. We will use the following techniques:</p>
+<h1 id="Unsupervised-Outlier-Detection">Unsupervised Outlier Detection<a class="anchor-link" href="#Unsupervised-Outlier-Detection">&#182;</a></h1><p>Now after I have processed data and converted everything into numeric values, I will be deploying machine learning algorithms. I will be using the following techniques:</p>
 <p>Local Outlier Factor (LOF)</p>
 <p>The anomaly score of each sample is called Local Outlier Factor. It measures the local deviation of density of a given sample with respect to its neighbors. It is local in that the anomaly score depends on how isolated the object is with respect to the surrounding neighborhood.</p>
 <p>Isolation Forest Algorithm</p>
@@ -13110,7 +13111,11 @@ Model is not working with current dataset.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h6 id="As-a-trained-model-is-working-with-so-small-accuracny-I'll-review-account-activity-manualy-using-DataStudio.-Full-report-can-be-found-under-this-Link">As a trained model is working with so small accuracny I'll review account activity manualy using DataStudio. Full report can be found under this <a href="https://datastudio.google.com/open/1cv5JXuZliSNLDmqfMXP4A69-kvwtpl-_">Link</a><a class="anchor-link" href="#As-a-trained-model-is-working-with-so-small-accuracny-I'll-review-account-activity-manualy-using-DataStudio.-Full-report-can-be-found-under-this-Link">&#182;</a></h6>
+<h6 id="As-a-trained-model-is-working-with-so-small-accuracny-I'll-review-account-activity-manualy-using-DataStudio.">As a trained model is working with so small accuracny I'll review account activity manualy using DataStudio.<a class="anchor-link" href="#As-a-trained-model-is-working-with-so-small-accuracny-I'll-review-account-activity-manualy-using-DataStudio.">&#182;</a></h6><p>Microsoft Excel, Mac Numbers and Google Spreadsheets can't handle such big amount data. Excel and Numbers are limited to 65k rows and Google Spreadsheets to 400k. Our transaction report has 681k rows.</p>
+<p>Google DataStudio is the best solution here since I can easily generate dynamic reports, if correct data are available.
+To be able efficently use DataStudio I merged all reports in one and removed unnecessary columns to minimize the size of the file. In Cell 16 I specified all columns which I removed.</p>
+<p>Full report can be found under this <a href="https://datastudio.google.com/open/1cv5JXuZliSNLDmqfMXP4A69-kvwtpl-_">Link</a></p>
+
 </div>
 </div>
 </div>
@@ -13192,7 +13197,9 @@ Model is not working with current dataset.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Task-3.a---Wide-open-Analysis:">Task 3.a - Wide-open Analysis:<a class="anchor-link" href="#Task-3.a---Wide-open-Analysis:">&#182;</a></h1><h4 id="The-MLRO-is-asking-for-some-information-about-account-activity-for-their-annual-report.-Explore-the-transactional-data.-Provide-a-histogram-showing-the-turnover-per-account-(inbound-funds-+-outbound-funds-only).-Don&#8217;t-forget-to-handle-for-different-currencies!-(10-points)">The MLRO is asking for some information about account activity for their annual report. Explore the transactional data. Provide a histogram showing the turnover per account (inbound funds + outbound funds only). Don&#8217;t forget to handle for different currencies! (10 points)<a class="anchor-link" href="#The-MLRO-is-asking-for-some-information-about-account-activity-for-their-annual-report.-Explore-the-transactional-data.-Provide-a-histogram-showing-the-turnover-per-account-(inbound-funds-+-outbound-funds-only).-Don&#8217;t-forget-to-handle-for-different-currencies!-(10-points)">&#182;</a></h4><h1 id="Task-3.b---Wide-open-Analysis:">Task 3.b - Wide-open Analysis:<a class="anchor-link" href="#Task-3.b---Wide-open-Analysis:">&#182;</a></h1><h4 id="Using-the-diagram-above-and-your-favorite-analytical-tool,-tell-us-some-statistical-measures-about-it-(e.g.-mean,-median,-IQR,-mode,-distribution,-local-maximums,-etc)-and-comment-on-its-implications-from-a-regulatory-and-best-practice-perspective.-This-analysis-will-be-going-to-the-board,-so-be-clear-and-precise,-including-references-to-regulation-and-guidance.-(25-points)">Using the diagram above and your favorite analytical tool, tell us some statistical measures about it (e.g. mean, median, IQR, mode, distribution, local maximums, etc) and comment on its implications from a regulatory and best practice perspective. This analysis will be going to the board, so be clear and precise, including references to regulation and guidance. (25 points)<a class="anchor-link" href="#Using-the-diagram-above-and-your-favorite-analytical-tool,-tell-us-some-statistical-measures-about-it-(e.g.-mean,-median,-IQR,-mode,-distribution,-local-maximums,-etc)-and-comment-on-its-implications-from-a-regulatory-and-best-practice-perspective.-This-analysis-will-be-going-to-the-board,-so-be-clear-and-precise,-including-references-to-regulation-and-guidance.-(25-points)">&#182;</a></h4>
+<h1 id="Task-3.a---Wide-open-Analysis:">Task 3.a - Wide-open Analysis:<a class="anchor-link" href="#Task-3.a---Wide-open-Analysis:">&#182;</a></h1><h4 id="The-MLRO-is-asking-for-some-information-about-account-activity-for-their-annual-report.-Explore-the-transactional-data.-Provide-a-histogram-showing-the-turnover-per-account-(inbound-funds-+-outbound-funds-only).-Don&#8217;t-forget-to-handle-for-different-currencies!-(10-points).">The MLRO is asking for some information about account activity for their annual report. Explore the transactional data. Provide a histogram showing the turnover per account (inbound funds + outbound funds only). Don&#8217;t forget to handle for different currencies! (10 points).<a class="anchor-link" href="#The-MLRO-is-asking-for-some-information-about-account-activity-for-their-annual-report.-Explore-the-transactional-data.-Provide-a-histogram-showing-the-turnover-per-account-(inbound-funds-+-outbound-funds-only).-Don&#8217;t-forget-to-handle-for-different-currencies!-(10-points).">&#182;</a></h4><hr>
+<p>Solutions for Task 3.a and Tasks 3.b will be provided in DataStudio Dashboard below.</p>
+<h1 id="Task-3.b---Wide-open-Analysis:">Task 3.b - Wide-open Analysis:<a class="anchor-link" href="#Task-3.b---Wide-open-Analysis:">&#182;</a></h1><h4 id="Using-the-diagram-above-and-your-favorite-analytical-tool,-tell-us-some-statistical-measures-about-it-(e.g.-mean,-median,-IQR,-mode,-distribution,-local-maximums,-etc)-and-comment-on-its-implications-from-a-regulatory-and-best-practice-perspective.-This-analysis-will-be-going-to-the-board,-so-be-clear-and-precise,-including-references-to-regulation-and-guidance.-(25-points)">Using the diagram above and your favorite analytical tool, tell us some statistical measures about it (e.g. mean, median, IQR, mode, distribution, local maximums, etc) and comment on its implications from a regulatory and best practice perspective. This analysis will be going to the board, so be clear and precise, including references to regulation and guidance. (25 points)<a class="anchor-link" href="#Using-the-diagram-above-and-your-favorite-analytical-tool,-tell-us-some-statistical-measures-about-it-(e.g.-mean,-median,-IQR,-mode,-distribution,-local-maximums,-etc)-and-comment-on-its-implications-from-a-regulatory-and-best-practice-perspective.-This-analysis-will-be-going-to-the-board,-so-be-clear-and-precise,-including-references-to-regulation-and-guidance.-(25-points)">&#182;</a></h4>
 </div>
 </div>
 </div>
